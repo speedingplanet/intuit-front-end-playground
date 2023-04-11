@@ -110,7 +110,37 @@
 					<option value="gmc">GMC</option>
 				</select>
 			</div>
-			<button type="submit">Save data</button>
+			<div style="margin-bottom:20px">
+				<p>Multiple select list</p>
+				<!-- label[for] points to input[id] -->
+				<label for="fruit">Select some fruit</label>
+				<select multiple size="5" name="fruit" id="fruit">
+					<option>Apples</option>
+					<option>Bananas</option>
+					<option>Pears</option>
+					<option>Oranges</option>
+					<option>Apricots</option>
+				</select>
+			</div>
+
+			<div>
+				<label for="life-story">Enter your life story below</label>
+				<textarea name="life-story" id="life-story" cols="30" rows="10" maxlength="1000"></textarea>
+			</div>
+			<div>
+				<!-- Easier to style with CSS, easier to work with -->
+				<p>Buttons</p>
+				<button type="submit">Submit</button>
+				<button type="reset">Reset</button>
+				<button type="button">Generic</button>
+			</div>
+			<div>
+				<!-- Not as easy to style with CSS, kind of a pain in the neck -->
+				<p>Buttons as input types</p>
+				<input type="submit">
+				<input type="reset">
+				<input type="button" value="Generic">
+			</div>
 		</form>
 	</body>
 </html>
