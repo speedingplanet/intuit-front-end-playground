@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Forms</title>
+	</head>
+	<body>
+		<h1>HTML Forms</h1>
+
+		<!-- &lt; for a less-than sign and &gt; for a greater-than sign -->
+		<p>All form elements work inside a &lt;form&gt; element or outside a &lt;form&gt; element</p>
+
+		<!-- method defaults to GET -->
+		<!-- action points back to the same URL, i.e. the form submits data to itself -->
+		<form>
+			<!-- div>label+input:text -->
+			<div>
+				<label for="text-input-id">Text input</label>
+				<!-- Almost always want a name, might need an id if you're using JavaScript -->
+				<input
+					type="text"
+					name="text-input-name"
+					id="text-input-id"
+				/>
+			</div>
+
+			<button type="submit">Save data</button>
+		</form>
+	</body>
+</html>
