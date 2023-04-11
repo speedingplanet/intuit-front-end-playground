@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Blocks vs Inline</title>
+		<style>
+			.inline-one {
+				color: red;
+				border: 2px solid blue;
+			}
+
+			.box {
+				border: 4px dashed green;
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Blocks vs Inline HTML</h1>
+		<h2>Inline text</h2>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quas pariatur, adipisci
+			alias, <span class="inline-one">laboriosam ratione quisquam aut sapiente</span> vitae corrupti, similique mollitia incidunt
+			esse exercitationem ab soluta. Iure, aut quaerat!
+		</p>
+
+		<div class="box">
+			<h3>Box 1</h3>
+			<p>This is box one</p>
+		</div>
+		<!-- The + sign is a sibling operator  -->
+		<!-- div>h3+p -->
+		<div class="box">
+			<h3>Box 2</h3>
+			<p>This is box 2</p>
+		</div>
+	</body>
+</html>
