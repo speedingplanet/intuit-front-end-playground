@@ -30,8 +30,32 @@
 		/* tag, class, attribute */
 		li[title].second-one { text-decoration: none; }
 
-		/* Selector relationships */
+		/* Multiple selectors */
+		h1, h2, h3, h4, h5, h6 {
+			border-top: black 2px solid;
+			border-bottom: black 2px solid;
+		}
 
+		/* Selector relationships */
+		/* Parent-child */
+		.reset>h2 { text-decoration: underline; }
+
+		/* This doesn't work, no child li's under div */
+		.reset>li { text-decoration: underline; }
+
+		.reset>p {color: blue}
+
+		/* Descendants: li's that are under (at any level) something with the class "reset" */
+		.reset li { color: black }
+		div span { color: orange}
+		div li p { font-weight: bold}
+
+		/* Sibling relationships */
+		/* Next sibling only */
+		#first-sibling + li { background-color: chartreuse}
+
+		/* All following siblings */
+		#first-sibling ~ li { text-decoration: underline}
 	</style>
 </head>
 <body>
@@ -48,6 +72,7 @@
 		<p class="last-one">After the list</p>
 	</div>
 	<div>
+		<h2>Combined selectors</h2>
 		<ol>
 			<li class="first-one" title="North America">Mountain View</li>
 			<li class="second-one" title="North America">New York</li>
@@ -55,5 +80,30 @@
 			<li class="last-one">Hong Kong</li>
 		</ol>
 	</div>
+	<div class="reset">
+		<h2>Selector relationships</h2>
+		<ul>
+			<li>Apples</li>
+			<li>Peaches</li>
+			<li>Pears</li>
+			<li>Oranges</li>
+		</ul>
+		<p>This paragraph is a child of the div with the class reset.</p>
+		<div>
+			Div level
+			<ul>
+				<li>List item
+					<p>Paragraph with a <span>span</span></p>
+				</li>
+			</ul>
+		</div>
+		<ul>
+			<li id="first-sibling">First</li>
+			<li>Second</li>
+			<li>Third</li>
+			<li>Fourth</li>
+		</ul>
+	</div>
+
 </body>
 </html>
