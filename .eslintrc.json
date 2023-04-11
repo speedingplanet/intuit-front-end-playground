@@ -27,6 +27,7 @@
 		"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 1 }],
 		"no-tabs": ["off"],
 		"no-unused-vars": ["warn"],
+		"no-void": ["off"],
 		"object-curly-newline": [
 			"error",
 			{
