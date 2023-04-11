@@ -5,8 +5,55 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>CSS Selectors</title>
+	<style>
+		/* Selector building blocks */
+		/* Tags */
+		li { color: red }
+
+		/* ID attributes */
+		#id-example { font-weight: bold; }
+
+		/* CSS class name */
+		.class-example { font-family: 'Courier New', Courier, monospace }
+
+		/* HTML attribute */
+		/* Just checks for the presence of an attribute, later we will look for a value */
+		[title] { text-decoration: underline; }
+
+		/* Combining selectors */
+		/* tag and class */
+		li.last-one { background-color: yellow;}
+
+		/* attribute with value */
+		[title=Asia] { background-color: lightblue;}
+
+		/* tag, class, attribute */
+		li[title].second-one { text-decoration: none; }
+
+		/* Selector relationships */
+
+	</style>
 </head>
 <body>
 	<h1>CSS Selectors</h1>
+	<div>
+		<h2>Selector building blocks</h2>
+		<p>Before the list</p>
+		<ul>
+			<li>This is a list item</li>
+			<li id="id-example">This list item has an ID</li>
+			<li class="class-example">This list item has a class</li>
+			<li title="attribute example">This list item has an attribute</li>
+		</ul>
+		<p class="last-one">After the list</p>
+	</div>
+	<div>
+		<ol>
+			<li class="first-one" title="North America">Mountain View</li>
+			<li class="second-one" title="North America">New York</li>
+			<li title="Asia">Shanghai</li>
+			<li class="last-one">Hong Kong</li>
+		</ol>
+	</div>
 </body>
 </html>
