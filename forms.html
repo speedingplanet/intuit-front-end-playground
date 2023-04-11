@@ -11,6 +11,16 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Forms</title>
+		<style>
+			.input-container {
+				display: flex;
+				max-width: 25vw;
+			}
+
+			.input-container>div {
+				flex: 1;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>HTML Forms</h1>
@@ -22,43 +32,49 @@
 		<!-- action points back to the same URL, i.e. the form submits data to itself -->
 		<form>
 			<!-- div>label+input:text -->
-			<div>
-				<label for="text-input-id">Text input</label>
+			<div class="input-container">
+				<div><label for="text-input-id">Text input</label></div>
 				<!-- Almost always want a name, might need an id if you're using JavaScript -->
-				<input
-					type="text"
-					name="text-input-name"
-					id="text-input-id"
-				/>
+				<div>
+					<input
+						type="text"
+						name="text-input-name"
+						id="text-input-id"
+					/>
+				</div>
 			</div>
-			<div>
-				<label for="number-input-id">Number input</label>
-				<input
-					type="number"
-					name="number-input-name"
-					id="number-input-id"
-				/>
+			<div class="input-container">
+				<div><label for="number-input-id">Number input</label></div>
+				<div>
+					<input
+						type="number"
+						name="number-input-name"
+						id="number-input-id"
+					/>
+				</div>
 			</div>
 
 			<!-- Similar functionality for the email, tel, url types -->
 			<!-- 1) Light validation for email, telephone or URL -->
 			<!-- 2) May modify the virtual keyboard on a mobile device (e.g. including '@' for email) -->
-			<div>
-				<label for="email-input-id">Email input</label>
-				<input
-					type="email"
-					name="email-input-name"
-					id="email-input-id"
-					required
-				/>
+			<div class="input-container">
+				<div><label for="email-input-id">Email input</label></div>
+				<div>
+					<input
+						type="email"
+						name="email-input-name"
+						id="email-input-id"
+						required
+					/>
+				</div>
 			</div>
 
 			<div>
 				<p>Pick an ice cream flavor</p>
 				<!-- All radios in a set should have the same "name" attribute, but different values -->
-				<input type="radio" name="flavor" value="chocolate" id="flavor-chocolate"><label for="flavor-chocolate">Chocolate</label>
-				<input type="radio" name="flavor" value="vanilla" id="flavor-vanilla"><label for="flavor-vanilla">Vanilla</label>
-				<input type="radio" name="flavor" value="strawberry" id="flavor-strawberry"><label for="flavor-strawberry">Strawberry</label>
+				<label><input type="radio" name="flavor" value="chocolate" id="flavor-chocolate">Chocolate</label>
+				<label><input type="radio" name="flavor" value="vanilla" id="flavor-vanilla">Vanilla</label>
+				<label><input type="radio" name="flavor" value="strawberry" id="flavor-strawberry">Strawberry</label>
 			</div>
 
 			<div>
@@ -80,6 +96,19 @@
 				<input type="checkbox" name="topping" value="sausage" id="topping-sausage"><label for="topping-sausage">Sausage</label>
 				<input type="checkbox" name="topping" value="pineapple" id="topping-pineapple"><label for="topping-pineapple">Pineapple</label>
 				<input type="checkbox" name="topping" value="mushrooms" id="topping-mushrooms"><label for="topping-mushrooms">Mushrooms</label>
+			</div>
+
+			<div>
+				<p>Select list</p>
+				<!-- label[for] points to input[id] -->
+				<label for="car-make">Select a car manufacturer</label>
+				<select name="car-make" id="car-make">
+					<option value="ford">Ford</option>
+					<option value="honda">Honda</option>
+					<option value="hyundai">Hyundai</option>
+					<option value="dodge">Dodge</option>
+					<option value="gmc">GMC</option>
+				</select>
 			</div>
 			<button type="submit">Save data</button>
 		</form>
