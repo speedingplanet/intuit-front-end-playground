@@ -36,16 +36,33 @@
 			border-bottom: black 2px solid;
 		}
 
+		/* Multiple selectors are full selectors */
+		.first-one, p, li[alt], div > p > dt, section span {
+			/* Doesn't really do anything */
+			font-size: inherit;
+		}
+
 		/* Selector relationships */
-		/* Parent-child */
-		.reset>h2 { text-decoration: underline; }
+		/* Parent-child '>' */
+		.reset > h2 { text-decoration: underline; }
 
 		/* This doesn't work, no child li's under div */
-		.reset>li { text-decoration: underline; }
+		.reset > li { text-decoration: underline; }
 
-		.reset>p {color: blue}
+		.reset > p {color: blue}
 
-		/* Descendants: li's that are under (at any level) something with the class "reset" */
+		/* Find ANY child elements, regardless of type, under a div */
+		div > * {
+			font-size: inherit;
+		}
+
+		/* Find effectively grandchild elements */
+		div > * > * {
+			font-size: inherit;
+		}
+
+		/* Ancestor-descendant: li's that are under (at any level) something with the class "reset" */
+		/* Relationship uses whitespace (unfortunately) */
 		.reset li { color: black }
 		div span { color: orange}
 		div li p { font-weight: bold}
@@ -56,6 +73,23 @@
 
 		/* All following siblings */
 		#first-sibling ~ li { text-decoration: underline}
+
+		/* Best practices */
+		/* Be specific as you need, but no more or less */
+		/* Use anchors */
+		/* ids and classes are good anchors */
+		/* good */
+		#navbar li { font-size: inherit; }
+		/* not as good */
+		nav li { font-size: inherit; }
+		/* probably bad */
+		div li { font-size: inherit; }
+
+		/* don't use ids in the middle of a selector, generally */
+		div > #foo > li {	font-size: inherit; }
+		/* This is better */
+		#foo > li {	font-size: inherit; }
+
 	</style>
 </head>
 <body>
