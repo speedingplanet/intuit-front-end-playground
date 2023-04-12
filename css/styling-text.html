@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Styling Text</title>
+		<style>
+			.container {
+				font-size: 16pt;
+			}
+
+			html {
+				font-size: 12pt;
+			}
+
+			#item-1 {
+				font-size: 22pt;
+			}
+
+			#item-2 {
+				/* em relative to the container */
+				font-size: 1.25em; /* 1.25 * 16pt = 20pt */
+			}
+
+			#item-3 {
+				/* rem relative to the root */
+				font-size: 1.75rem; /* 12pt * 1.75 = 21pt */
+			}
+
+			#item-4 {
+				font-weight: bold;
+			}
+
+			#item-5 {
+				color: rgb(25%, 52%, 25%);
+			}
+
+			#item-6 {
+				font-style: italic;
+			}
+
+			#item-7 {
+				/* line, style, color */
+				text-decoration: underline wavy red;
+			}
+
+			#item-8 {
+				line-height: 1.5em;
+			}
+
+			#item-9 {
+				font-family: sans-serif
+			}
+
+			#item-10 {
+				font-family: 'Courier New'
+			}
+
+			#item-11 {
+				font-family: Helvetica, Arial, sans-serif
+			}
+			
+		</style>
+	</head>
+	<body>
+		<h1>Styling Text with CSS</h1>
+
+		<div class="container">
+			<ul>
+				<li>Unmodified font size</li>
+				<li id="item-1">font-size (absolute)</li>
+				<li id="item-2">font-size (relative container)</li>
+				<li id="item-3">font-size (relative root)</li>
+				<li id="item-4">font-weight</li>
+				<li id="item-5">color</li>
+				<li id="item-6">font-style</li>
+				<li id="item-7">text-decoration</li>
+				<li id="item-8">line-height</li>
+				<li id="item-9">font-family (generic font family)</li>
+				<li id="item-10">font-family (specific)</li>
+				<li id="item-11">font-family (specific with fallbacks)</li>
+				<li id="item-12">font-family</li>
+				<li id="item-13"></li>
+			</ul>
+		</div>
+		<div>
+			<p style="line-height: 1.75">
+				Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non eum doloribus dolor ipsa nobis
+				quisquam nihil? Placeat rerum maxime fugiat delectus, cumque, ducimus ad quisquam provident
+				dolorum saepe soluta nisi. Aut incidunt a iure maiores. Fuga saepe recusandae officiis
+				excepturi dolor accusantium maxime atque delectus tempora? Autem reprehenderit ex sed
+				officiis, animi quidem natus eveniet itaque voluptas nisi tempora. Incidunt! Ducimus quasi
+				exercitationem consequuntur tempore repudiandae! Similique dignissimos voluptatibus, debitis
+				excepturi officia laudantium at odio voluptatum temporibus quo, in sapiente et illum
+				corporis! Similique laborum numquam ducimus incidunt eius nihil? Illo porro suscipit, ad
+				reiciendis, labore odio sint fugit, voluptatibus magnam nesciunt repellat! Sint quia soluta,
+				voluptate odit quas incidunt vitae delectus in mollitia illum placeat, rerum consequatur,
+				autem numquam. Magnam, eum cupiditate alias delectus exercitationem adipisci eius commodi,
+				officia doloribus veritatis esse pariatur repellendus assumenda quidem. Accusantium ab eos
+				sit rerum omnis vel, repellat libero dicta, ad veniam corrupti.
+			</p>
+		</div>
+	</body>
+</html>
