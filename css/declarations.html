@@ -1,79 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CSS Declarations</title>
-	<style>
-		/* declarations look like this: */
-		/* selector { property: value } */
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>CSS Declarations</title>
+		<style>
+			/* declarations look like this: */
+			/* selector { property: value } */
 
-		/* Uses hardcoded values and units (mm, px, pt) */
-		#box-1 {
-			height: 20mm;
-			border: 2px black solid;
-			margin-bottom: 10px;
-			font-size: 16pt;
-		}
+			/* Uses hardcoded values and units (mm, px, pt) */
+			#box-1 {
+				height: 20mm;
+				border: 2px black solid;
+				margin-bottom: 10px;
+				font-size: 16pt;
+			}
 
-		/* Responsive units */
-		#box-2 {
-			height: 10vh; /* viewport-height */
-			border: 1vw green dotted; /* viewport-width */
-			font-size: 1.5rem; /* relative to the font-size of the root element */
-			overflow: hidden;
-		}
+			/* Responsive units */
+			#box-2 {
+				height: 10vh; /* viewport-height */
+				border: 1vw green dotted; /* viewport-width */
+				font-size: 1.5rem; /* relative to the font-size of the root element */
+				overflow: hidden;
+			}
 
-		/* CSS shorthand properties */
-		/* border, margin, padding are notable shorthand */
-		#box-3 {
-			height: 200px;
-			border-width: 4px;
-			border-color: red;
-			border-style: double;
-			border-top-width: 8px;
-			border-top-color: blue;
-			border-top-style: solid;
-			border-bottom: chartreuse inset 10px;
-		}
+			/* CSS shorthand properties */
+			/* border, margin, padding are notable shorthand */
+			#box-3 {
+				height: 100px;
+				border-width: 4px;
+				border-color: red;
+				border-style: double;
+				border-top-width: 8px;
+				border-top-color: blue;
+				border-top-style: solid;
+				border-bottom: chartreuse inset 10px;
+			}
 
-	</style>
-</head>
-<body>
-	<h1>CSS Declarations</h1>
-	<!-- div.container>div.box*10[id=box-$]>p{Box #$} -->
-	<div class="container">
-		<div class="box" id="box-1">
-			<p>Box #1, hardcoded units</p>
+			#box-4,
+			#box-5,
+			#box-6,
+			#box-7,
+			#box-8,
+			#box-9 {
+				height: 75px;
+				border: 2px solid black;
+			}
+
+			#box-4 {
+				background-color: deepskyblue;
+			}
+
+			/* Hex colors: #RRGGBB R=Red, G=Green, B=Blue, 00-ff (0-255 in hexadecimal) */
+			#box-5 {
+				background-color: #246b70;
+			}
+
+			/* Hex triplets: #RGB R=Red, G=Green, B=Blue, 00-ff (0-255 in hexadecimal) */
+			/* F05 -> FF0055 */
+			#box-6 {
+				background-color: #f05;
+			}
+
+			/* rgb(red, green, blue) values from 0-255, decimal or 1-100 percentage */
+			#box-7 {
+				background-color: rgb(10%, 50%, 100%);
+			}
+
+			#box-8 {
+				border: 2px orange double;
+				background-color: rgb(255, 0, 0);
+			}
+
+			#box-9 {
+				position: relative;
+				top: -40px;
+				border: 2px green dashed;
+				/* add a transparency value between 0.0 and 1.0 */
+				background-color: rgba(0, 0, 255, 0.5);
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS Declarations</h1>
+		<!-- div.container>div.box*10[id=box-$]>p{Box #$} -->
+		<div class="container">
+			<div
+				class="box"
+				id="box-1"
+			>
+				<p>Box #1, hardcoded units</p>
+			</div>
+			<div
+				class="box"
+				id="box-2"
+			>
+				<p>
+					Box #2, responsive units
+					<span style="font-size: 1rem">Normal size</span>
+				</p>
+			</div>
+			<div
+				class="box"
+				id="box-3"
+			>
+				<p>Box #3, shorthand properties</p>
+			</div>
+			<div
+				class="box"
+				id="box-4"
+			>
+				<p>Box #4, color name</p>
+			</div>
+			<div
+				class="box"
+				id="box-5"
+			>
+				<p>Box #5, hex color</p>
+			</div>
+			<div
+				class="box"
+				id="box-6"
+			>
+				<p>Box #6, hex triplet</p>
+			</div>
+			<div
+				class="box"
+				id="box-7"
+			>
+				<p>Box #7, rgb</p>
+			</div>
+			<div
+				class="box"
+				id="box-8"
+			>
+				<p>Box #8</p>
+			</div>
+			<div
+				class="box"
+				id="box-9"
+			>
+				<p>Box #9</p>
+			</div>
+			<div
+				class="box"
+				id="box-10"
+			>
+				<p>Box #10</p>
+			</div>
 		</div>
-		<div class="box" id="box-2">
-			<p>Box #2, responsive units <span style="font-size: 1rem">Normal size</span></p>
-		</div>
-		<div class="box" id="box-3">
-			<p>Box #3, shorthand properties</p>
-		</div>
-		<div class="box" id="box-4">
-			<p>Box #4</p>
-		</div>
-		<div class="box" id="box-5">
-			<p>Box #5</p>
-		</div>
-		<div class="box" id="box-6">
-			<p>Box #6</p>
-		</div>
-		<div class="box" id="box-7">
-			<p>Box #7</p>
-		</div>
-		<div class="box" id="box-8">
-			<p>Box #8</p>
-		</div>
-		<div class="box" id="box-9">
-			<p>Box #9</p>
-		</div>
-		<div class="box" id="box-10">
-			<p>Box #10</p>
-		</div>
-	</div>
-</body>
+	</body>
 </html>
