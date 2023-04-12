@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pseudo Classes</title>
+	<style>
+		.children li:first-child {
+			color: blue;
+		}
+
+		.children li:last-child {
+			color: red
+		}
+
+		.nth li:nth-child(odd) {
+			text-decoration: underline;
+		}
+
+		.nth li:nth-child(even) {
+			font-style: italic;
+		}
+
+		/* Every third, starting at the second element */
+		.nth li:nth-child(3n + 2) {
+			background-color: yellow;
+		}
+
+		.hover .box {
+			background-color: blue;
+			color: white;
+			height: 200px;
+			width: 200px;
+		}
+
+		.hover .box:hover {
+			background-color: yellow;
+			color: black;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>CSS Selectors: Pseudo-classes</h1>
+	<p>Pseudo-classes try to make it easier to reach elements that would otherwise be difficult to reach.</p>
+
+	<div class="children">
+		<h2>:first-child, :last-child</h2>
+		<ul>
+			<li>First / one</li>
+			<li>second</li>
+			<li>third</li>
+			<li>fourth</li>
+			<li>Last / fifth</li>
+		</ul>
+	</div>
+	<div class="nth">
+		<h2>:nth-child</h2>
+		<ul>
+			<li>Item 1</li>
+			<li>Item 2</li>
+			<li>Item 3</li>
+			<li>Item 4</li>
+			<li>Item 5</li>
+			<li>Item 6</li>
+			<li>Item 7</li>
+			<li>Item 8</li>
+			<li>Item 9</li>
+			<li>Item 10</li>
+		</ul>
+	</div>
+	<div class="hover">
+		<h2>:hover</h2>
+		<div class="box"><p>Hover over this box with the mouse</p></div>
+	</div>
+
+	<div>
+		<h2>Other useful pseudo-classes</h2>
+		<ul>
+			<li>:enabled / :disabled</li>
+			<li>:checked</li>
+			<li>:valid / :invalid</li>
+			<li>:required / :optional</li>
+			<li>:focus</li>
+			<li>:is / :not / :where / :has</li>
+		</ul>
+	</div>
+</body>
+</html>
