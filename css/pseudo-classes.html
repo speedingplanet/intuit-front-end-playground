@@ -52,6 +52,10 @@
 			font-size: 75%;
 		}
 
+		#negation li:not(.clickable) {
+			background-color: orange;
+		}
+
 	</style>
 </head>
 <body>
@@ -90,6 +94,15 @@
 		<h2>:hover</h2>
 		<div class="box"><p>Hover over this box with the mouse</p></div>
 	</div>
+
+<div id="negation">
+	<h2>:not</h2>
+	<ul>
+		<li class="clickable">.clickable</li>
+		<li>no class</li>
+		<li>no class</li>
+	</ul>
+</div>
 
 	<div>
 		<h2>Other useful pseudo-classes</h2>

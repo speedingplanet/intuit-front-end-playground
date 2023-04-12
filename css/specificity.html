@@ -19,8 +19,35 @@
 			.container > .box {
 				flex: 1 1; /* can grow and shrink */
 				margin: 0 5%; /* horizontal margins only */
-				border: 2px solid black
+				border: 2px solid black;
 			}
+
+			.box:nth-child(odd) {
+				background-color: yellow;
+			}
+
+			.box {
+				background-color: green;
+			}
+
+			#third-box {
+				background-color: cadetblue;
+			}
+
+			/* Specificity: 0, 0, 4 */
+			body div div p {
+				font-family: 'Courier New', Courier, monospace;
+			}
+			
+			/* Specificity: 0, 1, 1 */
+			p:last-child {
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			.container div:last-child {
+				background-color: violet !important;
+			}
+
 		</style>
 	</head>
 	<body>
@@ -32,13 +59,13 @@
 			<div class="box">
 				<p>Box #2</p>
 			</div>
-			<div class="box">
+			<div class="box" id="third-box">
 				<p>Box #3</p>
 			</div>
 			<div class="box">
 				<p>Box #4</p>
 			</div>
-			<div class="box">
+			<div class="box" style="background-color: chartreuse;">
 				<p>Box #5</p>
 			</div>
 		</div>
