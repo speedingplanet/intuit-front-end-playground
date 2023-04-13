@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Boxes and CSS</title>
+	<style>
+		.box {
+			border: 2px solid black;
+			margin-top: 25px;
+		}
+
+		.box p {
+			margin: 0;
+		}
+
+		#box-1 {
+			/* top, right, bottom, left */
+			padding: 10px 0px 15px 20px;
+		}
+
+		#box-2 {
+			/* all sides */
+			padding: 15px;
+		}
+
+		#box-3 {
+			height: 100px;
+			/* top & bottom / left & right */
+			padding: 20px 0px;
+		}
+
+		#box-4 {
+			/* Calculates padding, border to be included in box height */
+			box-sizing: border-box;
+			height: 100px;
+			/* top & bottom / left & right */
+			padding: 20px 0px;
+		}
+
+		#box-5 {
+			height: 100vh; /* force vertical scrolling */
+		}
+
+		#box-6 {
+			position: absolute;
+			top: 10vh;
+			left: 15vw;
+			height: 200px;
+			width: 200px;
+			background-color: red;
+		}
+	</style>
+</head>
+<body>
+	<h1>Boxes and CSS</h1>
+	<div class="container">
+		<div class="box" id="box-1">
+			<p>Box #1, individual padding values</p>
+		</div>
+		<div class="box" id="box-2">
+			<p>Box #2, one padding value</p>
+		</div>
+		<div class="box" id="box-3">
+			<p>Box #3, content box</p>
+		</div>
+		<div class="box" id="box-4">
+			<p>Box #4</p>
+		</div>
+		<div class="box" id="box-5">
+			<p>Box #5</p>
+		</div>
+		<div class="box" id="box-6">
+			<p>Box #6</p>
+		</div>
+		<div class="box" id="box-7">
+			<p>Box #7</p>
+		</div>
+		<div class="box" id="box-8">
+			<p>Box #8</p>
+		</div>
+		<div class="box" id="box-9">
+			<p>Box #9</p>
+		</div>
+		<div class="box" id="box-10">
+			<p>Box #10</p>
+		</div>
+	</div>
+</body>
+</html>
