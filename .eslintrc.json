@@ -5,16 +5,22 @@
 		"es2021": true,
 		"mocha": true
 	},
-	"parser": "@babel/eslint-parser",
+	"plugins": ["@typescript-eslint"],
+	"parser": "@typescript-eslint/parser",
 	"parserOptions": {
-		"requireConfigFile": false
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 2021,
+		"sourceType": "module",
+		"project": "./tsconfig.json"
 	},
-	"plugins": ["@babel"],
-	"extends": ["standard"],
+	"extends": ["standard", "standard-with-typescript"],
 	"rules": {
 		"array-bracket-newline": ["error", { "minItems": 2 }],
 		"array-element-newline": ["error", { "multiline": true }],
-		"comma-dangle": [
+		"comma-dangle": "off",
+		"@typescript-eslint/comma-dangle": [
 			"error",
 			{
 				"functions": "never",
@@ -22,12 +28,13 @@
 				"objects": "always-multiline"
 			}
 		],
-		"indent": ["warn", "tab", { "SwitchCase": 1 }],
+		"indent": "off",
+		"@typescript-eslint/indent": ["warn", "tab", { "SwitchCase": 1 }],
 		"max-len": ["warn", { "code": 100, "comments": 120 }],
 		"newline-per-chained-call": ["error", { "ignoreChainWithDepth": 1 }],
 		"no-tabs": ["off"],
-		"no-unused-vars": ["warn"],
-		"no-void": ["off"],
+		"no-unused-vars": "off",
+		"@typescript-eslint/no-unused-vars": ["warn"],
 		"object-curly-newline": [
 			"error",
 			{
@@ -39,9 +46,21 @@
 		],
 		"object-property-newline": ["error", { "allowAllPropertiesOnSameLine": false }],
 		"prefer-const": "off",
-		"semi": ["error", "always"],
-		"quotes": ["warn", "single"],
-		"space-before-function-paren": ["error", { "named": "never" }]
+		"semi": "off",
+		"@typescript-eslint/semi": ["error", "always"],
+		"quotes": "off",
+		"@typescript-eslint/quotes": ["warn", "single"],
+		"space-before-function-paren": "off",
+		"@typescript-eslint/space-before-function-paren": ["error", { "named": "never" }],
+		"@typescript-eslint/member-delimiter-style": [
+			"error",
+			{
+				"multiline": { "delimiter": "semi" }
+			}
+		],
+		"@typescript-eslint/explicit-function-return-type": ["off"],
+		"@typescript-eslint/promise-function-async": ["off"],
+		"no-void": ["off"]
 	},
 	"ignorePatterns": ["node_modules"]
 }
