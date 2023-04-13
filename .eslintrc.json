@@ -17,7 +17,7 @@
 	},
 	"extends": ["standard", "standard-with-typescript"],
 	"rules": {
-		"array-bracket-newline": ["error", { "minItems": 2 }],
+		"array-bracket-newline": ["error", { "minItems": 3 }],
 		"array-element-newline": ["error", { "multiline": true }],
 		"comma-dangle": "off",
 		"@typescript-eslint/comma-dangle": [
