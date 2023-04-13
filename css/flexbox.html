@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge"
+		/>
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Flexbox</title>
+		<style>
+			p {
+				margin: 0;
+			}
+
+			.container {
+				display: flex;
+				border: 4px double red;
+				padding: 10px;
+				overflow-x: auto;
+
+				justify-content: flex-end;
+			}
+
+			.box {
+				/* height and width of the box include padding and border */
+				box-sizing: border-box;
+				border: 2px solid black;
+				padding: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Using CSS Flexbox</h1>
+
+		<section class="container">
+			<div
+				class="box"
+				id="box-1"
+			>
+				<p>Box #1</p>
+			</div>
+			<div
+				class="box"
+				id="box-2"
+			>
+				<p>Box #2</p>
+			</div>
+			<div
+				class="box"
+				id="box-3"
+			>
+				<p>Box #3</p>
+			</div>
+			<div
+				class="box"
+				id="box-4"
+			>
+				<p>Box #4</p>
+			</div>
+			<div
+				class="box"
+				id="box-5"
+			>
+				<p>Box #5</p>
+			</div>
+		</section>
+
+		<style>
+			.form-container {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				height: fit-content;
+			}
+
+			.form-container div {
+				display: flex;
+				flex-direction: column;
+			}
+
+			.labels {
+				line-height: 1.33;
+			}
+
+			.inputs input, .labels label {
+				margin-top: 10px;
+			}
+		</style>
+
+		<section>
+			<h2>Flexbox forms</h2>
+			<form class="form-container">
+				<!-- Labels first, then fields, because flexbox -->
+				<div class="labels">
+					<label for="first-name">First Name:</label>
+					<label for="last-name">Last Name:</label>
+					<label for="city">City:</label>
+					<label for="state">State:</label>
+				</div>
+				<div class="inputs">
+					<input
+						type="text"
+						name="first-name"
+						id="first-name"
+					/>
+					<input
+						type="text"
+						name="last-name"
+						id="last-name"
+					/>
+					<input
+						type="text"
+						name="city"
+						id="city"
+					/>
+					<input
+						type="text"
+						name="state"
+						id="state"
+					/>
+				</div>
+			</form>
+		</section>
+	</body>
+</html>
