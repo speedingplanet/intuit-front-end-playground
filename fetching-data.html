@@ -11,17 +11,27 @@
 			content="width=device-width, initial-scale=1.0"
 		/>
 		<title>Fetching data</title>
+		<style>
+			#output {
+				width: 50vw;
+				height: 40vh;
+				border: black 2px solid;
+				margin-top: 5vh;
+				padding: 10px;
+				overflow-y: scroll;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>Fetching data</h1>
 		<p>Fetching data from a remote API</p>
 
 		<div>
-			<button>Fetch (Promises)</button>&nbsp;
-			<button>Fetch (async/await)</button>
+			<button id="button-fetch-promises">Fetch (Promises)</button>&nbsp;
+			<button id="button-fetch-async">Fetch (async/await)</button>
 		</div>
+		<p>Output will go here:</p>
 		<div id="output">
-			<p>Output will go here.</p>
 		</div>
 		<script src="src/fetching-data.ts"></script>
 	</body>
